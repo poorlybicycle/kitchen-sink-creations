@@ -16,8 +16,8 @@ header {
 
   .search-button {
     background: none;
-    border: none;
-    padding: 0;
+    border: #4b453c solid 2px;
+    padding: 3;
     cursor: pointer;
     color: #4b453c;
     text-decoration: none;
@@ -31,8 +31,8 @@ header {
 
   .login-button {
     background: none;
-    border: none;
-    padding: 0;
+    border: #4b453c solid 2px;
+    padding: 3;
     cursor: pointer;
     color: #4b453c;
     text-decoration: none;
@@ -46,8 +46,8 @@ header {
 
   .create-account-button {
     background: none;
-    border: none;
-    padding: 0;
+    border: #4b453c solid 2px;
+    padding: 3;
     cursor: pointer;
     color: #4b453c;
     text-decoration: none;
