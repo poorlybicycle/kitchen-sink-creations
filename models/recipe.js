@@ -20,13 +20,13 @@ Recipe.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
-        password: {
+        //should be an array of references to ingredients
+        ingredient: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [6],
             },
-        },
     },
     {
         sequelize,
