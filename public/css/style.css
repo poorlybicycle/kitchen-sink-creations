@@ -1,28 +1,60 @@
 * {
-    color: red;
+    color: rgb(147, 103, 65);
+    background-color: #F7E9D7;
+    text-align: center;
 }
 
-header, .project:not(:last-child) {
-    border-bottom: 1px solid #ccc;
+header {
+    text-align: center;
+    border: 4px;
   }
   
   .card {
-    background-color: #FFEEEE;
-
+    background-color: #f4c6eb;
+    
   }
 
-
-  .no-button {
+  .search-button {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    color: #1b89bc;
+    color: #4b453c;
     text-decoration: none;
     font-size: 100%;
   }
   
-  .no-button:hover {
-    color: #065b83;
+  .search-button:hover {
+    color: #927651;
+    text-decoration: underline;
+  }
+
+  .login-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #4b453c;
+    text-decoration: none;
+    font-size: 100%;
+  }
+  
+  .login-button:hover {
+    color: #927651;
+    text-decoration: underline;
+  }
+
+  .create-account-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #4b453c;
+    text-decoration: none;
+    font-size: 100%;
+  }
+  
+  .create-account-button:hover {
+    color: #927651;
     text-decoration: underline;
   }
