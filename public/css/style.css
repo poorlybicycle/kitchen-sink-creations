@@ -1,60 +1,130 @@
+/* Color bank and font family */
 * {
-    color: rgb(147, 103, 65);
-    background-color: #F7E9D7;
-    text-align: center;
+  font-family: 'Nerko One', sans-serif, cursive;
+  padding: 0;
+  margin: 0;
 }
 
-header {
-    text-align: center;
-    border: 4px;
-  }
-  
-  .card {
-    background-color: #f4c6eb;
-    
-  }
+:root {
+  --color1: #FFEEEE;
+  --color2: #FFF6EA;
+  --color3: #F7E9D7;
+  --color4: #EBD8C3;
+  --color5: black;
+}
 
-  .search-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #4b453c;
-    text-decoration: none;
-    font-size: 100%;
-  }
-  
-  .search-button:hover {
-    color: #927651;
-    text-decoration: underline;
-  }
+.body {
+  width: fit-content;
+}
 
-  .login-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #4b453c;
-    text-decoration: none;
-    font-size: 100%;
-  }
-  
-  .login-button:hover {
-    color: #927651;
-    text-decoration: underline;
-  }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 800px;
+}
 
-  .create-account-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #4b453c;
-    text-decoration: none;
-    font-size: 100%;
-  }
-  
-  .create-account-button:hover {
-    color: #927651;
-    text-decoration: underline;
-  }
+/* This is the nav bar styling */
+.nav-link:hover {
+  color: var(--color4);
+}
+
+/* This is the log In styling */
+.log-in {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 500px;
+}
+
+.btn-primary {
+  color: var(--color5);
+  background-color: var(--color4);
+}
+
+.btn-primary:hover {
+  color: var(--color5);
+  background-color: var(--color1);
+}
+
+/* This is the search styling */
+.search-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.btn-outline-info {
+  color: var(--color5);
+  background-color: var(--color4)
+}
+
+.btn-outline-info:hover {
+  color: var(--color5);
+  background-color: var(--color1);
+}
+
+/* This is the create account styling */
+.btn-warning {
+  color: var(--color5);
+  background-color: var(--color4)
+}
+
+.btn-warning:hover {
+  color: var(--color5);
+  background-color: var(--color1);
+}
+
+/* Container styling to eliminate margin */
+.container {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.main-body-text {
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.align {
+  display: flex;
+  text-align: center;
+}
+
+.ks-center {
+  padding-left: 250px;
+}
+
+.log-in-center {
+  padding-left: 310px;
+}
+
+.img {
+  display: flex;
+  justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+  align-items: self-end;
+}
+
+.img2 {
+  width: 240px;
+  height: 130px;
+  align-items: flex-start;
+}
+
+.img3 {
+  display: flex;
+  justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+}
+
+.text-main {
+  padding: 20px;
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
