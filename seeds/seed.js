@@ -4,7 +4,7 @@ const UserIngredient = require('../models/UserIngredient');
 const seedIngredients = require('./ingredient-seeds');
 const seedRecipes = require('./recipe-seeds');
 const userData = require('./userData.json');
-const UserIngredientData = require("./user-ingredient-seeds.json")
+const UserIngredientData = require("./user-ingredient-seeds.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -18,11 +18,11 @@ const seedDatabase = async () => {
 console.log('\n----- DATABASE SYNCED -----\n');
 
 await seedIngredients();
-console.log('\n----- CATEGORIES SEEDED -----\n');
+console.log('\n----- INGREDIENTS SEEDED -----\n');
 
     await UserIngredient.bulkCreate(UserIngredientData)
-// await seedRecipes();
-console.log('\n----- PRODUCTS SEEDED -----\n');
+await seedRecipes();
+console.log('\n----- RECIPE SEEDED -----\n');
 
 
     process.exit(0);
