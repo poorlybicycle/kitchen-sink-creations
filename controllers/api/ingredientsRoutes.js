@@ -2,6 +2,20 @@ const router = require('express').Router();
 const {User,Ingredient,Recipe, UserIngredient} = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.post("/newRecipe", withAuth, (req, res) => {
+    const recipeInfo = {
+        recipe_name: req.body.recipeName,
+        time: req.body.time,
+        serving: req.body.serving,
+        description: req.body.description
+
+    }
+
+   Recipe.create(recipeInfo)
+    .then(response => {
+        res.json('Recipes are shown')
+    })
+});
 //Get all Ingredients
 router.get("/", withAuth, (req, res) => {
     Ingredient.findAll()
