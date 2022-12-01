@@ -4,6 +4,12 @@
     <p>{{ingredient_name}}</p>
 {{/each}}
 
-<div id="recipeContainer">search results:</div>
 
-<script src="/js/loadRecipe.js"></script>
+<div id="recipeContainer">search results:
+    {{#each recipe}}
+    <p>{{recipe_name}}</p>
+    {{/each}}
+</div>
+
+
+<script src="./js/loadRecipe.js"></script>
