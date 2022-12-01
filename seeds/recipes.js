@@ -1,4 +1,4 @@
-const { Recipes } = require('../models');
+const { Recipe } = require('../models');
 
 const recipeData = [ 
     {
