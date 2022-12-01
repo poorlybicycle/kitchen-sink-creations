@@ -7,7 +7,7 @@ const ingredientData = [
   },
   {
     ingredient_name: 'water',
-    recipe_id: 1
+    recipe_id: 1,
   },
   {
     ingredient_name: 'sugar',
@@ -29,6 +29,6 @@ const ingredientData = [
   },
 ];
 
-const ingredientTags = () => Ingredient.bulkCreate(ingredientData);
+const seedIngredients = () => Ingredient.bulkCreate(ingredientData);
 
-module.exports = ingredientTags;
+module.exports = seedIngredients;
