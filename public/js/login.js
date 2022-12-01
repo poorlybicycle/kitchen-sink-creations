@@ -1,10 +1,11 @@
-const loginFormHandler = async () => {
-    console.log('nice')
+const loginFormHandler = async (event) => {
+    event.preventDefault();
+    //console.log('nice')
 
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
-    //if (email && password) {
+    if (email && password) {
         console.log('great')
         // /api/users/login is just a place holder until we do the api routes
         const response = await fetch('/api/users/login', {
@@ -20,12 +21,12 @@ const loginFormHandler = async () => {
         } else {
             alert('Failed to log in');
         }
-    //}
+    }
 };
 
-// document
-//     .querySelector('.login-form')
-//     .addEventListener('submit', loginFormHandler);
+document
+    .querySelector('.login-form')
+    .addEventListener('submit', loginFormHandler);
 
 document.querySelector('.login-form').addEventListener('submit', function (evt) {
     console.log('query')
