@@ -1,18 +1,25 @@
 const Ingredient = require('./ingredient');
 const Recipe = require('./recipe');
-const User = require('./user');
+const User = require('./User');
+const UserIngredient = require("./UserIngredient")
 
 // Ingredient belongs to Recipe
-Ingredient.belongsTo(Recipe,{
-    foreignKey: "recipe_id",
-});
 
-// Recipe have many Ingredients
-Recipe.hasMany(Ingredient, {
-    foreignKey: "recipe_id",
-  });
+// User.hasMany(Ingredient, {
+//   foreignKey: "user_id",
+//   });
 
+User.belongsToMany(Ingredient, {
+  through: UserIngredient,
+  as: 'ingredients',
+  foreignKey: 'user_id'
+})
 
+Ingredient.belongsToMany(Ingredient, {
+  through: UserIngredient,
+  as: 'users',
+  foreignKey: 'ingredient_id'
+})
 
 
 
@@ -21,5 +28,6 @@ module.exports = {
     Ingredient,
     Recipe,
     User,
+    UserIngredient
   };
   

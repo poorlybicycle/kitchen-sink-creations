@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Model } = require('sequelize');
-const { User } = require('../../models');
+const { User, Ingredient } = require('../../models');
+const UserIngredient = require('../../models/UserIngredient');
 
 router.post('/login', async (req, res) => {
     try {
@@ -11,12 +12,12 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    // const validPassword = await userData.checkPassword(req.body.password);
 
-    if (!validPassword) {
-        res.status(400).json({ message: 'Incorrect email or password, please try again'});
-        return;
-    }
+    // if (!validPassword) {
+    //     res.status(400).json({ message: 'Incorrect email or password, please try again'});
+    //     return;
+    // }
 
     req.session.save(() => {
         req.session.user_id = userData.id;
@@ -40,5 +41,22 @@ router.post('/logout', (req, res) => {
         res.status.apply(404).end();
     }
 });
+
+router.get('/:id', (req, res) => {
+    User.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [
+            {
+                model: Ingredient,
+                through: UserIngredient,
+                as: 'ingredients'
+            }
+        ]
+    }).then(userInfo => {
+        res.json(userInfo)
+    })
+})
 
 module.exports = router;

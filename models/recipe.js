@@ -21,12 +21,14 @@ Recipe.init(
             allowNull: true,
         },
         //should be an array of references to ingredients
-        // ingredient: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        //     validate: {
-        //         len: [6],
-        //     },
+        ingredient: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [6],
+            },
+        },
+        
     },
     {
         sequelize,
@@ -34,7 +36,7 @@ Recipe.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'recipe',
-      }
+    }
 );
 
 module.exports = Recipe;

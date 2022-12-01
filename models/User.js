@@ -35,9 +35,16 @@ User.init(
                 len: [6],
             },
         },
+        //  ingredient_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //  },
+
+    
     },
     {
-        sequelize
+        sequelize,
+        modelName: "user"
     }
 );
 
