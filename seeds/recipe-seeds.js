@@ -31,13 +31,6 @@ const recipeData = [
         description: 'Simple recipe that can be easily altered for different flavors.'
     },
     {
-        recipe_name: 'Muffins',
-        time: '35',
-        serving: '12',
-        ingredient: 'all-purpose flour, baking soda, salt, white sugar, milk, vegetable oil eggs',
-        description: 'Simple recipe that can be easily altered for different flavors.'
-    },
-    {
         recipe_name: 'Easy Bread',
         time: '2',
         serving: '2',
