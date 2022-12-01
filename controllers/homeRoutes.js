@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Ingredient, UserIngredient } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -28,6 +28,35 @@ router.get('/login', (req, res) => {
     }
 
     res.render('login');
+});
+
+router.get('/profile',withAuth, (req, res) => {
+    User.findOne({
+        where: {
+            id: req.session.user_id
+        },
+        include: [
+            {
+                model: Ingredient,
+                through: UserIngredient,
+                as: 'ingredients'
+            }
+        ]
+    }).then(userInfo => {
+        const userPantry = userInfo.get({ plain: true})
+        res.render("profile", userPantry)
+    })
+});
+
+router.get('/ingredients',withAuth, (req, res) => {
+    Ingredient.findAll()
+    .then(ingredientInfo => {
+        const ingredientList = ingredientInfo.map(ingredients => ingredients.get({ plain: true}))
+
+        res.render("ingredient", {
+            ingredient: ingredientList
+        })
+    })
 });
 
 module.exports = router;
