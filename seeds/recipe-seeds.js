@@ -39,6 +39,6 @@ const recipeData = [
     },
 ]
 
-const seedRecipe = () => Recipe.bulkCreate(recipeData);
+const seedRecipes = () => Recipe.bulkCreate(recipeData);
 
-module.exports = recipeData;
+module.exports = seedRecipes;
