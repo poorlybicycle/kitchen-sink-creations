@@ -137,6 +137,12 @@ header {
   background-color: var(--color1);
 }
 
+.ingredients {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Container styling to eliminate margin */
 .container {
   margin: 0;
