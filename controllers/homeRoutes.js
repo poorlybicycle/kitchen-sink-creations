@@ -44,7 +44,7 @@ router.get('/profile',withAuth, (req, res) => {
         ]
     }).then(userInfo => {
         const userPantry = userInfo.get({ plain: true})
-        res.render("profile", userPantry)
+        res.render("profile", {userPantry, logged_in: true})
     })
 });
 
@@ -54,7 +54,8 @@ router.get('/ingredients',withAuth, (req, res) => {
         const ingredientList = ingredientInfo.map(ingredients => ingredients.get({ plain: true}))
 
         res.render("ingredient", {
-            ingredient: ingredientList
+            ingredient: ingredientList,
+            logged_in: true
         })
     })
 });
