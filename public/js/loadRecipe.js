@@ -1,33 +1,19 @@
 const searchBtn = document.querySelector("#searchRecipes");
 
 
-// const testArr = ["pizza", "bagels", "bacon (toasted)", "scrambled eggs"]
+const recipeArr = ['Recipe Name: Depression Pie, time: 5, serving: 8, ingredient: pie crust, water, sugar, flour, butter, vanilla extract , Description: A Great Depression era water pie recipe. Only requires a few simple ingredients for a creamy, buttery pie!']
 function showResults(event) {
-    fetch('/api/ingredients/newRecipe', {
-        method: "POST",
-        body: JSON.stringify({
-         recipe_name: event.target.dataset.recipe_name  
-        }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    document.location.reload();
+
+    document.querySelector("#recipeContainer").innerHTML = `${recipeArr}`;
+    //perform search and with results, create html
+
+    for(i=1;i<recipeArr.length; i++) {
+        const newP = document.createElement("p");
+        newP.textContent = testArr[i];
+
+        document.querySelector("#recipeContainer").appendChild(newP)
+    }
 }
-//     document.querySelector("#recipeContainer").innerHTML = `${Recipe}`;
-//     //perform search and with results, create html
-
-//     for(i=0;i<testArr.length; i++) {
-//         const newP = document.createElement("p");
-//         newP.textContent = testArr[i];
-
-//         document.querySelector("#recipeContainer").appendChild(newP)
-//     }
-// }
-
-// function newCard() {
-
-//     document.getElementById("card1").innerHTML = `<img src='img/${firstCard}.png'>"`;
 
 
 searchBtn.addEventListener("click", showResults)
