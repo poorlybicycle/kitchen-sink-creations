@@ -39,9 +39,8 @@ User.init(
         //     type: DataTypes.INTEGER,
         //     allowNull: false,
         //  },
-
-    
     },
+    
     {
         sequelize,
         modelName: "user"
