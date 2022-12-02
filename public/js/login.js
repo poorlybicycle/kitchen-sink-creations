@@ -1,11 +1,9 @@
 const loginFormHandler = async () => {
-    console.log('nice')
 
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
     //if (email && password) {
-        console.log('great')
         // /api/users/login is just a place holder until we do the api routes
         const response = await fetch('/api/users/login', {
             method: 'POST',
@@ -13,7 +11,6 @@ const loginFormHandler = async () => {
             headers: { 'Content-Type': 'application/json' },
         });
         const json = await response.json()
-        console.log('okay', json)
 
         if (response.ok) {
             document.location.replace('/');
@@ -28,7 +25,6 @@ const loginFormHandler = async () => {
 //     .addEventListener('submit', loginFormHandler);
 
 document.querySelector('.login-form').addEventListener('submit', function (evt) {
-    console.log('query')
     evt.preventDefault();
     loginFormHandler()
 });
