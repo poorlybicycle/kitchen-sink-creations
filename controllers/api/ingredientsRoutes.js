@@ -7,7 +7,6 @@ router.get("/", withAuth, (req, res) => {
     Ingredient.findAll()
         .then((dbIngredientData) => res.json(dbIngredientData))
         .catch((err) => {
-            console.log(err);
             res.status(500).json(err);
         });
 });
