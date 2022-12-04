@@ -135,4 +135,6 @@
   margin-bottom: 6px;
 }
 
-/* Section for Profile */
+#logout {
+  cursor: pointer;
+}
