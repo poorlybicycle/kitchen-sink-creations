@@ -38,7 +38,7 @@ THEN I am able to view recipes but I am prompted to log in again before I can se
 ## Mock-Up
 
 The following demonstrates the applications functionality:
-[]()
+!(https://github.com/poorlybicycle/kitchen-sink-creations/blob/main/Screen%20Shot%202022-12-01%20at%207.28.28%20PM.png?raw=true)
 
 ## Technologies Used
 This application follows the Model-VIew-Controller paradigm. We used the [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your views, [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect to a MySQL database for the Models, and create an Express.js API for the controllers.

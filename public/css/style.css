@@ -76,6 +76,12 @@
   background-color: var(--color1);
 }
 
+.ingredients {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Container styling to eliminate margin */
 .container {
   margin: 0;
@@ -128,3 +134,6 @@
   margin-top: 5px;
   margin-bottom: 6px;
 }
+
+/* Section for Profile */
+

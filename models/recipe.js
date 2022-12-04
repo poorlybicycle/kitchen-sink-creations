@@ -12,10 +12,6 @@ Recipe.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        recipe_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         // recipeOrigin: {
         //     type: DataTypes.STRING,
         //     allowNull: true,

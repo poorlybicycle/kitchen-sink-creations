@@ -37,55 +37,61 @@
                 </ul>
             </div>
         </div>
+        {{#if logged_in}}
+        <a href="/profile">Profile</a>
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="login">login</a>
+        {{/if}}
     </nav>
 </div>
 
 
 <body>
-    <div class="container d-flex">
 
-        <div class="sidebar col-3 d-block flex-lg-column">
-            <div class="search-button">
-                <nav class="navbar bg-light">
-                    <div class="container-fluid">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2 mb-auto p-2" type="search" placeholder="Search"
-                                aria-label="Search">
-                            <button class="btn btn-outline-info" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
+
+    <div class="sidebar col-3 d-block flex-lg-column">
+        <div class="search-button">
+            <nav class="navbar bg-light">
+                <div class="container-fluid">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 mb-auto p-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-info" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <div class="log-in">
+            <div class="login-button">
+                <h3>Already a member?</h3>
+                <a class="btn btn-primary" href="#" role="button">Log In</a>
             </div>
-            <div class="log-in">
-                <div class="login-button">
-                    <h3>Already a member?</h3>
-                    <a class="btn btn-primary" href="#" role="button">Log In</a>
-                </div>
-                <div class="create-account-button">
-                    <a class="btn btn-warning" href="" role="button">Create Account</a>
-                </div>
+            <div class="create-account-button">
+                <a class="btn btn-warning" href="" role="button">Create Account</a>
             </div>
         </div>
-        <div class="main-body col-9 ">
-            <div class="main-body-text">
-                <div class="img">
-                    <img class="img2" src="./image/image.png" alt="alternatetext">
-                    <img class="img2" src="./image/image.png" alt="alternatetext">
-                    <img class="img2" src="./image/image.png" alt="alternatetext">
-                </div>
-                <div class="text-main">
-                    <h1 class="align ks-center">Kitchen Sink Creations</h1>
-                    <h3 class="align log-in-center">Log In to get started!</h3>
-                </div>
-                <div class="img3">
-                    <img class="img2" src="./image/image.png" alt="alternatetext">
-                    <img class="img2" src="./image/image.png" alt="alternatetext">
-                    <img class="img2" src="./image/image.png" alt="alternatetext">
-                </div>
-
-                {{{body}}}
+    </div>
+    <div class="main-body col-9 ">
+        <div class="main-body-text">
+            <div class="img">
+                <img class="img2" src="./image/image.png" alt="alternatetext">
+                <img class="img2" src="./image/image.png" alt="alternatetext">
+                <img class="img2" src="./image/image.png" alt="alternatetext">
             </div>
+            <div class="text-main">
+                <h1 class="align ks-center">Kitchen Sink Creations</h1>
+                <h3 class="align log-in-center">Log In to get started!</h3>
+            </div>
+            <div class="img3">
+                <img class="img2" src="./image/image.png" alt="alternatetext">
+                <img class="img2" src="./image/image.png" alt="alternatetext">
+                <img class="img2" src="./image/image.png" alt="alternatetext">
+            </div>
+
+            {{{body}}}
         </div>
+    </div>
 
     </div>
 
@@ -95,10 +101,8 @@
         </div>
 
     </footer>
-
-    {{!--
     <script src="./js/login.js"></script>
-    <script src="./js/logout.js"></script> --}}
+    <script src="./js/logout.js"></script>
 </body>
 
 </html>
