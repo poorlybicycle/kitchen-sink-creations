@@ -2,7 +2,6 @@
 * {
   font-family: 'Nerko One', sans-serif, cursive;
   padding: 0;
-  margin: 0;
 }
 
 :root {
@@ -14,7 +13,7 @@
 }
 
 .body {
-  width: fit-content;
+  width: 75%;
 }
 
 .sidebar {
@@ -101,11 +100,11 @@
 }
 
 .ks-center {
-  padding-left: 250px;
+  padding-left: 409px;
 }
 
 .log-in-center {
-  padding-left: 310px;
+  padding-left: 472px;
 }
 
 .img {
@@ -114,6 +113,7 @@
   display: flex;
   width: 100%;
   align-items: self-end;
+  padding-left: 199px;
 }
 
 .img2 {
@@ -136,4 +136,3 @@
 }
 
 /* Section for Profile */
-
