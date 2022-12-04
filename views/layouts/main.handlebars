@@ -18,7 +18,7 @@
 <div>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">KSC</a>
+            <a class="navbar-brand" href="/">KSC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,29 +26,32 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        {{#if logged_in}}
+                        <a class="nav-link" id="logout">logout</a>
+                        {{else}}
+                        <a class="nav-link" href="login">Login /Create Account</a>
+                        {{/if}}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
+                        {{#if logged_in}}
+                        <a class="nav-link" href="profile">Profile</a>
+                        {{/if}}
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Recipes</a>
-                    </li>
+                    <!-- dont know why this isnt working 
+                        <li class="nav-item">
+                            {{#if logged_in}}
+                            <a class="nav-link" href="ingredients">ingredients</a>
+                            {{/if}}
+                        </li>
+                        -->
                 </ul>
             </div>
         </div>
-        {{#if logged_in}}
-        <a href="/profile">Profile</a>
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="login">login</a>
-        {{/if}}
     </nav>
 </div>
 
 
 <body>
-    
 
     {{{body}}}
 
@@ -59,7 +62,7 @@
 
     </footer>
     <script src="./js/login.js"></script>
-    <script src="./js/logout.js"></script> 
+    <script src="./js/logout.js"></script>
 </body>
 
 </html>

@@ -1,15 +1,12 @@
-<h1 class="red">This is my pantry</h1>
-<button id="searchRecipes">search</button>
-{{#each userPantry.ingredients}}
-    <p>{{ingredient_name}}</p>
-{{/each}}
+<div class="row container d-flex">
+    <div class="main-body col-12">
+        <h1 class="red">This is my pantry</h1>
+        <button id="searchRecipes">search</button>
+        {{#each userPantry.ingredients}}
+        <p>{{ingredient_name}}</p>
+        {{/each}}
 
-
-<div id="recipeContainer">search results:
-    {{#each recipe}}
-    <p>{{recipe_name}}</p>
-    {{/each}}
+    </div>
 </div>
-
 
 <script src="./js/loadRecipe.js"></script>

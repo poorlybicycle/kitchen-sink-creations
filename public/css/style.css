@@ -1,69 +1,7 @@
-/* * {
-    color: rgb(147, 103, 65);
-    background-color: #F7E9D7;
-    text-align: center;
-}
-
-header {
-    text-align: center;
-    border: 4px;
-  }
-  
-  .card {
-    background-color: #f4c6eb;
-    
-  }
-
-  .search-button {
-    background: none;
-    border: #4b453c solid 2px;
-    padding: 3;
-    cursor: pointer;
-    color: #4b453c;
-    text-decoration: none;
-    font-size: 100%;
-  }
-  
-  .search-button:hover {
-    color: #927651;
-    text-decoration: underline;
-  }
-
-  .login-button {
-    background: none;
-    border: #4b453c solid 2px;
-    padding: 3;
-    cursor: pointer;
-    color: #4b453c;
-    text-decoration: none;
-    font-size: 100%;
-  }
-  
-  .login-button:hover {
-    color: #927651;
-    text-decoration: underline;
-  }
-
-  .create-account-button {
-    background: none;
-    border: #4b453c solid 2px;
-    padding: 3;
-    cursor: pointer;
-    color: #4b453c;
-    text-decoration: none;
-    font-size: 100%;
-  }
-  
-  .create-account-button:hover {
-    color: #927651;
-    text-decoration: underline;
-  } */
-
-  /* Color bank and font family */
+/* Color bank and font family */
 * {
   font-family: 'Nerko One', sans-serif, cursive;
   padding: 0;
-  margin: 0;
 }
 
 :root {
@@ -75,7 +13,7 @@ header {
 }
 
 .body {
-  width: fit-content;
+  width: 75%;
 }
 
 .sidebar {
@@ -162,11 +100,11 @@ header {
 }
 
 .ks-center {
-  padding-left: 250px;
+  padding-left: 409px;
 }
 
 .log-in-center {
-  padding-left: 310px;
+  padding-left: 472px;
 }
 
 .img {
@@ -175,6 +113,7 @@ header {
   display: flex;
   width: 100%;
   align-items: self-end;
+  padding-left: 199px;
 }
 
 .img2 {
@@ -196,5 +135,6 @@ header {
   margin-bottom: 6px;
 }
 
-/* Section for Profile */
-
+#logout {
+  cursor: pointer;
+}
