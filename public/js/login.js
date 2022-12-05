@@ -25,7 +25,7 @@ document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
 
-document.querySelector('.login-form').addEventListener('submit', function (evt) {
-    evt.preventDefault();
-    loginFormHandler()
-});
+//document.querySelector('.login-form').addEventListener('submit', function (evt) {
+   // evt.preventDefault();
+   // loginFormHandler()
+//});
